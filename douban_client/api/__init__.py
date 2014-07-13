@@ -13,6 +13,7 @@ from .miniblog import Miniblog
 from .book import Book
 from .movie import Movie
 from .music import Music
+from .radio import Radio
 
 
 class DoubanAPI(object):
@@ -71,3 +72,8 @@ class DoubanAPI(object):
     @property
     def music(self):
         return Music(self.access_token)
+
+    @property
+    def radio(self):
+        return Radio(self.access_token)
+    
