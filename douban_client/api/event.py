@@ -51,3 +51,11 @@ class Event(DoubanAPIBase):
     def wished(self, user_id, start=DEFAULT_START, count=DEFAULT_COUNT):
         return self._get('/v2/event/user_wished/%s' % user_id,
                          start=start, count=count)
+
+    def loc(self, id):
+        return self._get('/v2/loc/%s' % id)
+    
+    def loclist(self):
+        return self._get('/v2/loc/list',
+						 start=start, count=count)
+    
