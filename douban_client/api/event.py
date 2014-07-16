@@ -55,7 +55,7 @@ class Event(DoubanAPIBase):
     def loc(self, id):
         return self._get('/v2/loc/%s' % id)
     
-    def loclist(self):
+    def loclist(self, start=DEFAULT_START, count=DEFAULT_COUNT):
         return self._get('/v2/loc/list',
 						 start=start, count=count)
     
